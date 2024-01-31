@@ -4,8 +4,6 @@ from base_caching import BaseCaching
 from time import time
 
 
-tracker = 1
-
 
 class LIFOCache(BaseCaching):
     """
@@ -28,8 +26,8 @@ class LIFOCache(BaseCaching):
         if key and item:
             index = len(self.cache_data)
             if index >= super().MAX_ITEMS and key not in self.cache_data:
-                print(f"DISCARD: {list(self.cache_data)[index - tracker]}")
-                del self.cache_data[list(self.cache_data)[index - tracker]]
+                print(f"DISCARD: {list(self.cache_data)[index - 1]}")
+                del self.cache_data[list(self.cache_data)[index - 1]]
                 tracker += 1
                 if tracker > 2:
                     tracker = 1
