@@ -9,13 +9,21 @@ tracker = 1
 
 class LIFOCache(BaseCaching):
     """
-        a class LIFOCache that inherits from
-        BaseCaching and is a caching system
+    a class LIFOCache that inherits from
+    BaseCaching and is a caching system
     """
+
     def __init__(self):
+        """_summary_"""
         super().__init__()
 
     def put(self, key, item):
+        """_summary_
+
+        Args:
+            key (_type_): _description_
+            item (_type_): _description_
+        """
         global tracker
         if key and item:
             index = len(self.cache_data)
@@ -28,6 +36,14 @@ class LIFOCache(BaseCaching):
             self.cache_data[key] = item
 
     def get(self, key):
+        """_summary_
+
+        Args:
+            key (_type_): _description_
+
+        Returns:
+            _type_: _description_
+        """
         if key and key in self.cache_data:
             return self.cache_data[key]
         return None
