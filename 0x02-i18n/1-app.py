@@ -15,7 +15,7 @@ app = Flask(__name__)
 app.config.from_object(Config)
 babel = Babel(app)
 
-@app.rout('/')
+@app.route('/')
 def index():
     return render_template('1-index.html')
 
