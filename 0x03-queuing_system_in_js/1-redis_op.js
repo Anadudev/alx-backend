@@ -10,8 +10,8 @@ function setNewSchool(schoolName, value){
 }
 
 function displaySchoolValue(schoolName){
-	value = await client.get('key');
+	value = await client.get(schoolName);
 	console.log(value);	
 }
 
-client.disconnect();
+await client.disconnect();
