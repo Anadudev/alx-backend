@@ -9,7 +9,7 @@ const channel = "holberton school channel";
 client.subscribe(channel);
 client.on('message', (chan, mess) => {
 	if (chan === channel) console.log(message);
-	if (message === "KILL_SERVER"){
+	if (message === "KILL_SERVER") {
 		client.unsubscribe(channel);
 		client.quit();
 	}

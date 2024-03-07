@@ -4,7 +4,7 @@ const client = createClient();
 
 client.on('error', error => console.log('Redis client not connected to the server:', error));
 client.on('connect', () => console.log('Redis client connected to the server'));
-function publishMessage(message, time){
+function publishMessage(message, time) {
 	setTimeout(() => {
 		console.log(`About to send ${message}`);
 		client.publish('holberton school channel', message);

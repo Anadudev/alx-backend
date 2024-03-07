@@ -2,7 +2,7 @@ import kue from 'kue';
 
 const queue = kue.createQueue();
 
-const myObject = {phoneNumber: '0340584759',message: 'Hello world'};
+const myObject = { phoneNumber: '0340584759', message: 'Hello world' };
 let job = queue.create(myObject).save((error) => {
 	if (!error) console.log(`Notification job created: ${job.id}`);
 });

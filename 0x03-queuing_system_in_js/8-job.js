@@ -1,6 +1,6 @@
-function createPushNotificationsJobs(jobs, queue){
+function createPushNotificationsJobs(jobs, queue) {
 
-	if (!Array.isArray(jobs))throw Error('Jobs is not an array');
+	if (!Array.isArray(jobs)) throw Error('Jobs is not an array');
 
 	const jobOn = 'push_notification_code_3';
 	jobs.forEach((jobObj) => {

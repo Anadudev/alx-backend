@@ -1,5 +1,5 @@
 import kue from 'kue';
-import {expect} from 'chai';
+import { expect } from 'chai';
 import createPushNotificationsJobs from './8-job';
 
 const queue = kue.createQueue();
@@ -31,7 +31,7 @@ describe('createPushNotificationsJobs', () => {
 	});
 	it('checks if jobs is an array', () => {
 		expect(() => {
-			createPushNotificationsJobs({hello: "world"}, queue);
+			createPushNotificationsJobs({ hello: "world" }, queue);
 		}).to.throw('Jobs is not an array');
 	});
 	it('checks if jobs is an array', () => {
