@@ -64,7 +64,7 @@ jobs.forEach((jobObj) => {
 	job.on('complete', () => console.log(`Notification job ${job.id} completed`));
 	
 	job.on('filed', (error) => console.log(
-		`Notification job ${job.id} failed: E${error}`
+		`Notification job ${job.id} failed: ${error}`
 	));
 	
 	job.on('progress', (progress) => console.log(
